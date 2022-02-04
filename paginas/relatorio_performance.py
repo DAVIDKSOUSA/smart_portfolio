@@ -1,10 +1,6 @@
 #importar bibliotecas
 import streamlit as st
 import quantstats as qs
-import seaborn as sns
-import matplotlib
-matplotlib.use('TkAgg')
-import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
