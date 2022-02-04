@@ -13,7 +13,7 @@ lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gd
 
 #chamar pagina
 def inicio():
-    st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
+    #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
     st.title('Análise de um Portifólio de Investimentos')
     st.subheader('Como analisar minha carteira de investimento ?')
     st.write(
