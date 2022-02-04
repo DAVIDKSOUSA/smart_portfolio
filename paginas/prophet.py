@@ -2,8 +2,8 @@
 import pandas as pd
 import streamlit as st
 import yfinance as yf
-from fbprophet import Prophet
-from fbprophet.plot import plot_plotly, plot_components_plotly
+from prophet import Prophet
+from prophet.plot import plot_plotly, plot_components_plotly
 from plotly import graph_objs as go
 
 #chamar pagina
