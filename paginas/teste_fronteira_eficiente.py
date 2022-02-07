@@ -15,7 +15,7 @@ import yfinance as yf
 import quantstats as qs
 
 def teste_fronteira_eficiente():
-    start = st.sidebar.date_input('Data de Início', value=pd.datetime(2015, 1, 1))
+    start = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end = st.sidebar.date_input('Data Final')
     ticker_1 = st.sidebar.text_input('TICKER - Yahoo Finance', value='fb')
     ticker_2 = st.sidebar.text_input('TICKER - Yahoo Finance', value='f')
