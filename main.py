@@ -11,8 +11,8 @@ import paginas.prophet as pt
 st.set_page_config(page_title='Condor Portfólio', page_icon=':dollar:', layout='wide')
 
 #paginas
-st.sidebar.title('Escolha a página que deseja acessar.')
-pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente', 'Teste Fronteira Eficiente']
+st.sidebar.title('SELECIONE UMA OPÇÃO.')
+pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente']
 pagina = st.sidebar.selectbox("Selecione a página que você deseja", pagina)
 
 if pagina == 'Início':
