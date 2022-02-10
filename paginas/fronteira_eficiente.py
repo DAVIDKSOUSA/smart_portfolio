@@ -104,7 +104,7 @@ def fronteira_eficiente():
     weights_list=[]
     tickers_list=[]
 
-    for i in tqdm(range(5000)):
+    for i in tqdm(range(10000)):
         next_i = False
         while True:
             #- Choose assets randomly without replacement
@@ -149,9 +149,9 @@ def fronteira_eficiente():
                              text=[str(np.array(tickers_list[i])) + "<br>" + str(np.array(weights_list[i]).round(2)) for
                                    i in range(len(tickers_list))]))
     fig.update_layout(template='plotly_white',
-                      xaxis=dict(title='Annualised Risk (Volatility)'),
-                      yaxis=dict(title='Annualised Return'),
-                      title='Sample of Random Portfolios',
+                      xaxis=dict(title='Risco Anualizado (Volatilidade)'),
+                      yaxis=dict(title='Retorno Anual'),
+                      title='Portifólios',
                       width=850,
                       height=500)
     # fig.update_xaxes(range=[0.18, 0.35])
