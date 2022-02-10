@@ -41,7 +41,7 @@ def fronteira_eficiente():
     # - How many assests to include in each portfolio
     n_assets = 8
     # -- How many portfolios to generate
-    n_portfolios = 2000
+    n_portfolios = 5000
 
     # -- Initialize empty list to store mean-variance pairs for plotting
     mean_variance_pairs = []
@@ -104,7 +104,7 @@ def fronteira_eficiente():
     weights_list=[]
     tickers_list=[]
 
-    for i in tqdm(range(2000)):
+    for i in tqdm(range(5000)):
         next_i = False
         while True:
             #- Choose assets randomly without replacement
