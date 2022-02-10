@@ -6,7 +6,6 @@ import paginas.fronteira_eficiente as fe
 import paginas.relatorio_performance as rp
 import paginas.inicio as ic
 import paginas.prophet as pt
-import paginas.teste_fronteira_eficiente as etf
 
 #configuracao de pagina
 st.set_page_config(page_title='Condor Portfólio', page_icon=':dollar:', layout='wide')
@@ -26,10 +25,7 @@ if pagina == 'Prophet':
     pt.prophet()
 
 if pagina == 'Fronteira Eficiente':
-    fe.markowitz()
-
-if pagina == 'Teste Fronteira Eficiente':
-    etf.teste_fronteira_eficiente()
+    fe.fronteira_eficiente()
 
 
 
