@@ -14,7 +14,7 @@ import plotly.graph_objects as go
 import yfinance as yf
 #import quantstats as qs
 
-def teste_fronteira_eficiente():
+def fronteira_eficiente():
     start = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end = st.sidebar.date_input('Data Final')
     ticker_1 = st.sidebar.text_input('TICKER - Yahoo Finance', value='fb')
