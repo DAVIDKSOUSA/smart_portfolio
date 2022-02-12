@@ -18,28 +18,29 @@ def inicio():
     st.subheader('Como analisar minha carteira de investimento ?')
     st.write(
         'O processo de alocação patrimonial, apesar de ser simples não é fácil.'
-        'Devido à quantidade exarcebada de informações que temos através dos meios de comunicação, muitas vezes o'
-        'investidor fica confuso em relação à composição da sua carteira. Tanto em relação à quantidade quanto em'
-        'relação a classe de ativo. Nesse contexto esse aplicatico foi concebido com a intenção de auxiliar o    '
-        'no processo de alocação.'
-        ''
-        'o último grau de sofisticaçao é a simplicidade.'
+        'Devido à quantidade exarcebada de informações que temos, através dos '
+        'meios de comunicação, o investidor fica confuso em relação à composição'
+        'da sua carteira, tanto em relação à quantidade quanto em relação a classe de ativo. '
+        'Nesse contexto esse aplicativo foi concebido com a intenção de auxiliar o processo de alocação.'
+        'O aplicativo não irá te mostrar em qual classe de ativo investir, contudo uma vez definida a classe de ativo'
+        'é possível identificar a alocação mais eficaz, onde pode-se observar uma maior retorno esperado para um menor'
+        'risco (volatilidade).'
         )
+
     st.write(
         '[Saiba Mais](https://www.webfx.com/tools/emoji-cheat-sheet/)')  # colocar link blog mudar o nome saiba mais
     with st.container():
         st.write('---')
         left_column, right_column = st.columns(2)
         with left_column:
-            st.header('What I do')
+            st.header('Me siga nas mídias sociais para saber mais sobre alocação patrimonial.')
             st.write('##')
             st.write(
                 '''
-                dsavdvsfvasfv
-                - asdfasdf
-                - asdfasdvas
-                asdvasdv
-                kjshajksfhkls
+                Link Mídias Sociais
+                - @davidksousa
+                - linkdin
+                
                 '''
             )
             st.write('[Canal do YouTube](https://www.youtube.com/watch?v=61HE1kdavXk&list=RD61HE1kdavXk&start_radio=1)')
