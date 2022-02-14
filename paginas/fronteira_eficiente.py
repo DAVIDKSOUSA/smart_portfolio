@@ -15,6 +15,20 @@ import yfinance as yf
 #import quantstats as qs
 
 def fronteira_eficiente():
+    # introducao
+    st.subheader('FRONTEIRA EFICIENTE')
+    st.markdown("<h5 style='text-align: left; color:grey;'>Teoria moderna do portfólio - Harry Markowitz 1952 </h5>",
+                unsafe_allow_html=True)
+    st.write(
+        'Buscar reduzir o risco de um investimento, obtendo o máximo de Return on Investment (ROI) é o desejo de todo '
+        'investidor. Uma maneira de unir esses dois fatores é através da fronteira eficiente.'
+    )
+    st.markdown("<h5 style='text-align: left; color:grey;'>O que é FRONTEIRA EFICIENTE?</h5>",
+                unsafe_allow_html=True)
+    st.write(
+        'Fronteira Eficiente é um conceito apresentado por Harry Markowitz. Nele é apresentado que o risco de uma carteira não é' 
+        'dado simplesmente pela média dos ativos individuais, mas sim pela diversificação da carteira de investimento como um todo.'
+    )
     start = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end = st.sidebar.date_input('Data Final')
     ticker_1 = st.sidebar.text_input('TICKER - Yahoo Finance', value='fb')
