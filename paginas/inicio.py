@@ -14,7 +14,7 @@ lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gd
 #chamar pagina
 def inicio():
     #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
-    st.markdown("<h3 style='text-align: center; color:black; font-size:40px;'><b>SMART PORTFOLIO<b></h3>",
+    st.markdown("<h3 style='text-align: center; color:red; font-size:40px;'><b>SMART PORTFOLIO<b></h3>",
                 unsafe_allow_html=True)
     st.text('')
     st.markdown("<h3 style='text-align: center; color:grey; font-size:20px;'><b>Faça uma análise completa da sua "
