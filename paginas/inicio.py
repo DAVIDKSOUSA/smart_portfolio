@@ -53,7 +53,7 @@ def inicio():
             st.write('##')
             st.write(
                 '''
-                Link Mídias Sociais
+                Link Mídias Sociais kkk
                 '''
             )
             st.markdown(
