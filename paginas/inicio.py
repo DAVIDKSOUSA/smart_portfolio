@@ -57,7 +57,7 @@ def inicio():
             st.write('##')
             st.write(
                 '''
-                Link Mídias Sociais:
+                Link das Mídias Sociais:
                 '''
             )
             st.markdown(
