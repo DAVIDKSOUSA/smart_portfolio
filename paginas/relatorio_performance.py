@@ -11,7 +11,7 @@ def relatorio_performance():
     ticker = st.sidebar.text_input('Insira o código de acordo com o site Yahoo Finance.'
                                    , value='SPY'
                                    )
-    st.sidebar.write('Tempo de Análise')
+    st.sidebar.write('Período da Análise')
     period = st.sidebar.text_input('Escreva: '
                                    '5y, para 5 anos.',
                                    value='10y'
