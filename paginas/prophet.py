@@ -9,10 +9,10 @@ from plotly import graph_objs as go
 #chamar pagina
 def prophet():
     # baixar dados e sidebar
-    st.subheader('Últimas Cotações')
+    st.subheader('Previsão de Cotações com PROPHET')
     st.sidebar.header('Escolha a Data e o Ativo')
     ticker = st.sidebar.text_input('TICKER - Yahoo Finance', value='^BVSP')
-    start_date = st.sidebar.date_input('Data de Início', value=pd.datetime(2015, 1, 1))
+    start_date = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end_date = st.sidebar.date_input('Data Final')
 
     # mensagem warning
@@ -23,7 +23,7 @@ def prophet():
     # st.write(df.info)
     # df = wb.get_data_yahoo(ticker, start = start_date, end = end_date, )
     # df.index = pd.to_datetime(df.index, format = '%Y-%m-d')
-    st.write(df)
+    #st.write(df)
 
     # plotar gráfico
     trace1 = {
@@ -55,7 +55,7 @@ def prophet():
     # st.write(fig.show())
 
     # tempo de previsão
-    n_dias = st.slider('Quantidade de dias de previsão', 5, 365)
+    n_dias = st.slider('Quantidade de dias de previsão', 30, 250)
     df.reset_index(inplace=True)
     # df.Date = pd.Series(pd.to_datetime(df.index, format = '%Y-%m-%d'))
 
@@ -74,7 +74,8 @@ def prophet():
     futuro = modelo.make_future_dataframe(periods=n_dias, freq='B')
     previsao = modelo.predict(futuro)
     st.subheader('Previsão')
-    st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_dias))
+    #para mostrar o data frame usar o código abaixo
+    #st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_dias))
 
     # grafico1
     grafico1 = plot_plotly(modelo, previsao)

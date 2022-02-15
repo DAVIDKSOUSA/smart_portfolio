@@ -23,7 +23,7 @@ def fronteira_eficiente():
         'Buscar reduzir o risco de um investimento, obtendo o máximo de Return on Investment (ROI) é o desejo de todo '
         'investidor. Uma maneira de unir esses dois fatores é através da fronteira eficiente.'
     )
-    st.markdown("<h5 style='text-align: left; color:grey;'>O que é FRONTEIRA EFICIENTE?</h5>",
+    st.markdown("<h5 style='text-align: left; color:grey;'>O que é FRONTEIRA EFICIENTE ?</h5>",
                 unsafe_allow_html=True)
     st.write(
         'Fronteira Eficiente é um conceito apresentado por Harry Markowitz. Nele é apresentado que o risco de uma carteira não é' 
@@ -31,14 +31,14 @@ def fronteira_eficiente():
     )
     start = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end = st.sidebar.date_input('Data Final')
-    ticker_1 = st.sidebar.text_input('TICKER - Yahoo Finance', value='fb')
-    ticker_2 = st.sidebar.text_input('TICKER - Yahoo Finance', value='f')
-    ticker_3 = st.sidebar.text_input('TICKER - Yahoo Finance', value='ge')
-    ticker_4 = st.sidebar.text_input('TICKER - Yahoo Finance', value='pypl')
-    ticker_5 = st.sidebar.text_input('TICKER - Yahoo Finance', value='qcom')
-    ticker_6 = st.sidebar.text_input('TICKER - Yahoo Finance', value='t')
-    ticker_7 = st.sidebar.text_input('TICKER - Yahoo Finance', value='tsla')
-    ticker_8 = st.sidebar.text_input('TICKER - Yahoo Finance', value='v')
+    ticker_1 = st.sidebar.text_input('TICKER - Yahoo Finance', value='FB')
+    ticker_2 = st.sidebar.text_input('TICKER - Yahoo Finance', value='F')
+    ticker_3 = st.sidebar.text_input('TICKER - Yahoo Finance', value='GE')
+    ticker_4 = st.sidebar.text_input('TICKER - Yahoo Finance', value='PYPL')
+    ticker_5 = st.sidebar.text_input('TICKER - Yahoo Finance', value='QCOM')
+    ticker_6 = st.sidebar.text_input('TICKER - Yahoo Finance', value='T')
+    ticker_7 = st.sidebar.text_input('TICKER - Yahoo Finance', value='TSLA')
+    ticker_8 = st.sidebar.text_input('TICKER - Yahoo Finance', value='V')
 
     ticker = [ticker_1, ticker_2, ticker_3, ticker_4, ticker_5, ticker_6, ticker_7, ticker_8]
     data = yf.download(ticker, start=start, end=end)['Adj Close']
@@ -55,7 +55,7 @@ def fronteira_eficiente():
     # - How many assests to include in each portfolio
     n_assets = 8
     # -- How many portfolios to generate
-    n_portfolios = 5000
+    n_portfolios = 10000
 
     # -- Initialize empty list to store mean-variance pairs for plotting
     mean_variance_pairs = []
@@ -89,7 +89,7 @@ def fronteira_eficiente():
     mean_variance_pairs = np.array(mean_variance_pairs)
     risk_free_rate=0 #-- Include risk free rate here
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=mean_variance_pairs[:,1]**0.5, y=mean_variance_pairs[:,0],
+    fig.add_trace(go.Scatter(x=(mean_variance_pairs[:,1]**0.5*100).round(1), y=(mean_variance_pairs[:,0]*100).round(1),
                           marker=dict(color=(mean_variance_pairs[:,0]-risk_free_rate)/(mean_variance_pairs[:,1]**0.5),
                                       showscale=True,
                                       size=7,
@@ -99,9 +99,9 @@ def fronteira_eficiente():
                                      ),
                           mode='markers'))
     fig.update_layout(template='plotly_white',
-                      xaxis=dict(title='Annualised Risk (Volatility)'),
-                      yaxis=dict(title='Annualised Return'),
-                      title='Sample of Random Portfolios',
+                      xaxis=dict(title='Risco Anual % (Volatilidade)'),
+                      yaxis=dict(title='Retorno Anual %'),
+                      title='Possíveis Portifólios',
                       width=850,
                       height=500)
     #fig.update_xaxes(range=[0.1, 0.1])
@@ -150,7 +150,7 @@ def fronteira_eficiente():
     mean_variance_pairs = np.array(mean_variance_pairs)
     risk_free_rate = 0  # -- Include risk free rate here
     fig = go.Figure()
-    fig.add_trace(go.Scatter(x=mean_variance_pairs[:, 1] ** 0.5, y=mean_variance_pairs[:, 0],
+    fig.add_trace(go.Scatter(x=(mean_variance_pairs[:, 1] ** 0.5*100).round(1), y=(mean_variance_pairs[:, 0]*100).round(1),
                              marker=dict(color=(mean_variance_pairs[:, 0] - risk_free_rate) / (
                                          mean_variance_pairs[:, 1] ** 0.5),
                                          showscale=True,
@@ -160,11 +160,11 @@ def fronteira_eficiente():
                                          colorbar=dict(title="Sharpe<br>Ratio")
                                          ),
                              mode='markers',
-                             text=[str(np.array(tickers_list[i])) + "<br>" + str(np.array(weights_list[i]).round(2)) for
-                                   i in range(len(tickers_list))]))
+                             text=[str(np.array(tickers_list[i])) + "<br>" + str(np.array(weights_list[i]*100).round(0))
+                                   for i in range(len(tickers_list))]))
     fig.update_layout(template='plotly_white',
-                      xaxis=dict(title='Risco Anualizado (Volatilidade)'),
-                      yaxis=dict(title='Retorno Anual'),
+                      xaxis=dict(title='Risco Anualizado % (Volatilidade)'),
+                      yaxis=dict(title='Retorno Anual %'),
                       title='Portifólios',
                       width=850,
                       height=500)

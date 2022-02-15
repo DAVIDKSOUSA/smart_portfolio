@@ -14,23 +14,27 @@ lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gd
 #chamar pagina
 def inicio():
     #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
-    st.markdown("<h3 style='text-align: center; color:red; font-size:40px;'><b>SMART PORTFOLIO<b></h3>",
+    st.markdown("<h3 style='text-align: center; color:black; font-size:50px;'><b>SMART PORTFOLIO<b></h3>",
                 unsafe_allow_html=True)
     st.text('')
-    st.markdown("<h3 style='text-align: center; color:grey; font-size:20px;'><b>Faça uma análise completa da sua "
-                "carteira de investimentos de forma SIMPLES, OBJETIVA e RÁPIDA!<b></h3>",
+    st.markdown("<h1 style='text-align: center; color:grey; font-size:23px;'><b>Faça uma análise completa da sua "
+                "carteira de investimentos de forma<b></h1>",
+                unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align: center; color:black; font-size:30px;'><b>SIMPLES, OBJETIVA e RÁPIDA!<b></h3>",
                 unsafe_allow_html=True)
     st.text('')
     st.write(
         'O processo de alocação patrimonial, apesar de ser simples não é fácil. Devido à quantidade exarcebada de infor'
-        'mações que temos o investidor fica confuso em relação à composição da sua '
-        'carteira, tanto em relação à quantidade quanto a classe de ativo. Nesse contexto esse aplicativo '
-        'foi concebido com a intenção de auxiliar nesse processo de alocação. O aplicativo não irá te mostrar em qual class'
-        'e de ativo investir, contudo uma vez definida a classe de ativo é possível identificar a alocação eficiente, '
-        'onde pode-se observar uma maior retorno esperado para um menor risco (volatilidade).'
+        'mações que temos, muitas vezes, o investidor fica na dúvida em relação à composição da sua '
+        'carteira de investimentos. Neste contexto '
+        'o SMART PORTFOLIO '
+        'foi concebido com a intenção de auxiliar no processo de alocação patrimonial. O aplicativo não irá te mostrar '
+        'em qual classe de ativo financeiro investir, contudo uma vez definida a classe de ativo será possível '
+        'identificar uma alocação eficiente, '
+        'onde pode-se esperar um menor risco (volatilidade), para um maior retorno.'
         )
     st.write('---')
-    st.write(':point_left: Use o menu ao lado e selecione uma tarefa.')
+    st.write(':point_left: Use o menu ao lado e selecione uma funcionalidade.')
     st.write('---')
     with st.container():
         left_column, right_column = st.columns(2)
@@ -39,7 +43,7 @@ def inicio():
                 st.markdown(f'<h3 style="text-align: left; color:#F63366; font-size:28px;">{title}</h3>',
                             unsafe_allow_html=True)
             st.text('')
-            p_title('Qual objetivo deste aplicativo ?')
+            p_title('Qual objetivo do SMART PORTFOLIO ?')
             st.text('')
             st.write(
                 'Realizar a analise de ativos financeiros e o comportamento de um portifólio de investimentos através de '
@@ -53,12 +57,12 @@ def inicio():
             st.write('##')
             st.write(
                 '''
-                Link Mídias Sociais kkk
+                Link Mídias Sociais:
                 '''
             )
             st.markdown(
                 """
-                [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCHi_qOCcC_KeMu18cOyHtQg?style=social)](https://gitHub.com/dlopezyse/Synthia)
+                [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCHi_qOCcC_KeMu18cOyHtQg?style=social)](https://www.youtube.com/channel/UCHi_qOCcC_KeMu18cOyHtQg)
                 """
                 # [![Star](https: // img.shields.io / github / stars / dlopezyse / Synthia.svg?logo = instagram & style = social)](https: // gitHub.com / dlopezyse / Synthia)
                 # [![DFGDFG](https: // img.shields.io / github / stars / dlopezyse / Synthia.svg?logo = linkedin & style = social)](https: // www.linkedin.com / in / david-sousa-ab6826198 /)

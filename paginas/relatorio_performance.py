@@ -7,10 +7,13 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 def relatorio_performance():
 
     qs.extend_pandas()
-    ticker = st.sidebar.text_input('TICKER - Yahoo Finance', value='SPY')
-    period = st.sidebar.text_input('5y, para 5 anos\
-                                    1m, para 1 mês\
-                                    1d para 1 dia',
+    st.sidebar.write('Código da Ação')
+    ticker = st.sidebar.text_input('Insira o código de acordo com o site Yahoo Finance.'
+                                   , value='SPY'
+                                   )
+    st.sidebar.write('Tempo de Análise')
+    period = st.sidebar.text_input('Escreva: '
+                                   '5y, para 5 anos.',
                                    value='10y'
                                    )
     returns = qs.utils.download_returns(ticker, period=period)
