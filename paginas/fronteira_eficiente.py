@@ -17,6 +17,7 @@ import yfinance as yf
 def fronteira_eficiente():
     # introducao
     st.subheader('FRONTEIRA EFICIENTE')
+    st.write('.')
     st.markdown("<h5 style='text-align: left; color:grey;'>Teoria moderna do portfólio - Harry Markowitz 1952 </h5>",
                 unsafe_allow_html=True)
     st.write(

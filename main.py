@@ -21,6 +21,7 @@ st.set_page_config(page_title="Smart Portfolio",
 
 st.sidebar.markdown("<h3 style='text-align: center; color:black; font-size:20px;'><b>Bem Vindo ao Smart Portfolio !<b></h3>",
                 unsafe_allow_html=True)
+st.write('.')
 pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente']
 pagina = st.sidebar.selectbox("Selecione uma funcionalidade:", pagina)
 
