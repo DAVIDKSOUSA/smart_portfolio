@@ -7,7 +7,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 def relatorio_performance():
 
     qs.extend_pandas()
-    st.write('.')
     st.sidebar.write('Código da Ação')
     ticker = st.sidebar.text_input('Insira o código de acordo com o site Yahoo Finance.'
                                    , value='SPY'

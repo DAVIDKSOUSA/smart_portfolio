@@ -9,7 +9,6 @@ from plotly import graph_objs as go
 #chamar pagina
 def prophet():
     # baixar dados e sidebar
-    st.write('.')
     st.subheader('Previsão de Cotações com PROPHET')
     st.sidebar.header('Escolha a Data e o Ativo')
     ticker = st.sidebar.text_input('TICKER - Yahoo Finance', value='^BVSP')
