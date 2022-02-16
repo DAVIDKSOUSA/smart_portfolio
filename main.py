@@ -19,7 +19,7 @@ st.set_page_config(page_title="Smart Portfolio",
                    )
 #paginas
 
-st.sidebar.markdown("<h3 style='text-align: center; color:black; font-size:20px;'><b>Bem Vindo ao Smart Portfolio !<b></h3>",
+st.sidebar.markdown("<h3 style='text-align: center; color:#F63366; font-size:20px;'><b>Bem Vindo ao Smart Portfolio !<b></h3>",
                 unsafe_allow_html=True)
 pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente']
 pagina = st.sidebar.selectbox("Selecione uma funcionalidade:", pagina)
@@ -37,6 +37,7 @@ if pagina == 'Fronteira Eficiente':
     fe.fronteira_eficiente()
 
 #contato
+st.sidebar.write('---')
 expander = st.sidebar.expander('Contato')
 expander.write("Adoraria saber o que você achou !")
 expander.write('Fale comigo nas redes sociais:')

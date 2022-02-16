@@ -14,13 +14,15 @@ lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gd
 #chamar pagina
 def inicio():
     #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
-    st.markdown("<h3 style='text-align: center; color:black; font-size:50px;'><b>SMART PORTFOLIO<b></h3>",
+    st.write('---')
+    st.markdown("<h3 style='text-align: center; color:#F63366; font-size:50px;'><b>SMART PORTFOLIO<b></h3>",
                 unsafe_allow_html=True)
+    st.write('---')
     st.text('')
     st.markdown("<h1 style='text-align: center; color:grey; font-size:23px;'><b>Faça uma análise completa da sua "
                 "carteira de investimentos de forma<b></h1>",
                 unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align: center; color:black; font-size:30px;'><b>SIMPLES, OBJETIVA e RÁPIDA!<b></h3>",
+    st.markdown("<h3 style='text-align: center; color:grey; font-size:30px;'><b>SIMPLES, OBJETIVA e RÁPIDA!<b></h3>",
                 unsafe_allow_html=True)
     st.text('')
     st.write(
