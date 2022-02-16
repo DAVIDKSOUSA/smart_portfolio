@@ -108,6 +108,7 @@ def fronteira_eficiente():
     #fig.update_yaxes(range=[0.1,0.1])
     fig.update_layout(coloraxis_colorbar=dict(title="Sharpe Ratio"))
     st.plotly_chart(fig)
+    st.write('___')
 
 
 
