@@ -13,7 +13,7 @@ lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gd
 
 #chamar pagina
 def inicio():
-    #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')
+    #st.image('/Users/davidsousa/Prophet/Capa_Home.png', use_column_width='always')
     st.write('---')
     st.markdown("<h3 style='text-align: center; color:#F63366; font-size:50px;'><b>SMART PORTFOLIO<b></h3>",
                 unsafe_allow_html=True)

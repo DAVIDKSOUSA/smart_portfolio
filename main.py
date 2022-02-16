@@ -6,7 +6,10 @@ import paginas.fronteira_eficiente as fe
 import paginas.relatorio_performance as rp
 import paginas.inicio as ic
 import paginas.prophet as pt
+from PIL import Image
 
+#configuracao icone
+img = Image.open('Capa_Home.png')
 #configuracao de pagina
 st.set_page_config(page_title="Smart Portfolio",
                    page_icon=":robot_face:",
