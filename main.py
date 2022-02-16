@@ -9,10 +9,13 @@ import paginas.prophet as pt
 from PIL import Image
 
 #configuracao icone
+#colocar outra imagem de icone
 img = Image.open('Capa_Home.png')
+
 #configuracao de pagina
+#procurar emoji para modificar icone do app page_icon procurara na biblioteca tambem
 st.set_page_config(page_title="Smart Portfolio",
-                   page_icon=":robot_face:",
+                   page_icon='0x1f602:',
                    layout="centered",
                    initial_sidebar_state="expanded",
                    menu_items={'Get help': None,
@@ -20,6 +23,15 @@ st.set_page_config(page_title="Smart Portfolio",
                                "About": None
                                 }
                    )
+#ocultar o menu
+hide_menu_style = """
+    <style>
+    #MainMenu {visibility: hidden; }
+    footer {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+
 #paginas
 st.sidebar.write('---')
 st.sidebar.markdown("<h3 style='text-align: center; color:#F63366; font-size:20px;'><b>Bem Vindo ao Smart Portfolio !<b></h3>",
