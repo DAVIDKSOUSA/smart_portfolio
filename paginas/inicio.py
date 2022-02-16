@@ -10,7 +10,7 @@ def load_lottieurl(url):
         return None
     return r.json()
 lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gdt35llx.json')
-#F63366
+
 #chamar pagina
 def inicio():
     #st.image('/Users/davidsousa/Prophet/Capa Home.png', use_column_width='always')

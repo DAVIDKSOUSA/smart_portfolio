@@ -18,7 +18,7 @@ st.set_page_config(page_title="Smart Portfolio",
                                 }
                    )
 #paginas
-#F63366
+st.sidebar.write('---')
 st.sidebar.markdown("<h3 style='text-align: center; color:#F63366; font-size:20px;'><b>Bem Vindo ao Smart Portfolio !<b></h3>",
                 unsafe_allow_html=True)
 pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente']
