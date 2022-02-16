@@ -53,7 +53,7 @@ def fronteira_eficiente():
     #- https://quant.stackexchange.com/questions/4753/annualized-covariance
     cov = daily_returns.cov()*252
     # - How many assests to include in each portfolio
-    n_assets = 8
+    n_assets = len(ticker)
     # -- How many portfolios to generate
     n_portfolios = 10000
 
@@ -64,7 +64,7 @@ def fronteira_eficiente():
     # -- Loop through and generate lots of random portfolios
     for i in range(n_portfolios):
         # - Choose assets randomly without replacement
-        assets = np.random.choice(list(daily_returns.columns), n_assets, replace=False)
+        assets = np.random.choice(list(daily_returns.columns), n_assets, replace=True)
         # - Choose weights randomly
         weights = np.random.rand(n_assets)
         # - Ensure weights sum to 1
@@ -113,7 +113,7 @@ def fronteira_eficiente():
 
     #-- Create random portfolio weights and indexes
     #- How many assests in the portfolio
-    n_assets = 8
+    n_assets = len(ticker)
     mean_variance_pairs = []
     weights_list=[]
     tickers_list=[]
@@ -122,7 +122,7 @@ def fronteira_eficiente():
         next_i = False
         while True:
             #- Choose assets randomly without replacement
-            assets = np.random.choice(list(daily_returns.columns), n_assets, replace=False)
+            assets = np.random.choice(list(daily_returns.columns), n_assets, replace=True)
             #- Choose weights randomly ensuring they sum to one
             weights = np.random.rand(n_assets)
             weights = weights/sum(weights)
