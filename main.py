@@ -1,6 +1,6 @@
 #baixar as bibliotecas
 import streamlit as st
-
+from streamlit_option_menu import option_menu
 #importar paginas
 import paginas.fronteira_eficiente as fe
 import paginas.relatorio_performance as rp
@@ -38,6 +38,15 @@ st.sidebar.markdown("<h3 style='text-align: center; color:#F63366; font-size:20p
                 unsafe_allow_html=True)
 pagina = ['Início', 'Relatório Performance', 'Prophet', 'Fronteira Eficiente']
 pagina = st.sidebar.selectbox("Selecione uma funcionalidade:", pagina)
+
+#pagina com navegation bar
+pagina = option_menu(
+    menu_title= "Menu",
+    options=['Início','Relatório Performance', 'Prophet', 'Fronteira Eficiente'],
+    menu_icon='cast',
+    default_index=0,
+    orientation='horizontal'
+)
 
 if pagina == 'Início':
     ic.inicio()
