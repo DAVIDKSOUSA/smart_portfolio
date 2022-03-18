@@ -1,6 +1,7 @@
 #baixar as bibliotecas
 import streamlit as st
 from streamlit_option_menu import option_menu
+
 #importar paginas
 import paginas.fronteira_eficiente as fe
 import paginas.relatorio_performance as rp
