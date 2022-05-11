@@ -1,15 +1,15 @@
 #importar bibliotecas
 import streamlit as st
-from streamlit_lottie import st_lottie
-import requests
+# from streamlit_lottie import st_lottie
+# import requests
 
 #animacao
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code !=200:
-        return None
-    return r.json()
-lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gdt35llx.json')
+# def load_lottieurl(url):
+#     r = requests.get(url)
+#     if r.status_code !=200:
+#         return None
+#     return r.json()
+# lottie_coding = load_lottieurl('https://assets5.lottiefiles.com/packages/lf20_gdt35llx.json')
 
 #chamar pagina
 def inicio():
@@ -71,5 +71,5 @@ def inicio():
             )
 
         with right_column:
-            st_lottie(lottie_coding, height=600, key='coding')
-
+            # st_lottie(lottie_coding, height=600, key='coding')
+            st.write('Teste')

@@ -42,7 +42,7 @@ pagina = st.sidebar.selectbox("Selecione uma funcionalidade:", pagina)
 
 #pagina com navegation bar
 pagina = option_menu(
-    menu_title= "Menu",
+    menu_title="Menu",
     options=['Início','Relatório Performance', 'Prophet', 'Fronteira Eficiente'],
     menu_icon='cast',
     default_index=0,

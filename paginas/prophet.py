@@ -11,7 +11,7 @@ def prophet():
     # baixar dados e sidebar
     st.subheader('Previsão de Cotações com PROPHET')
     st.sidebar.header('Escolha a Data e o Ativo')
-    ticker = st.sidebar.text_input('TICKER - Yahoo Finance', value='^BVSP')
+    ticker = st.sidebar.text_input('TICKER - Yahoo Finance', value='aapl ')
     start_date = st.sidebar.date_input('Data de Início', value=pd.datetime(2018, 1, 1))
     end_date = st.sidebar.date_input('Data Final')
 
@@ -75,7 +75,7 @@ def prophet():
     previsao = modelo.predict(futuro)
     st.subheader('Previsão')
     #para mostrar o data frame usar o código abaixo
-    #st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_dias))
+    st.write(previsao[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(n_dias))
 
     # grafico1
     grafico1 = plot_plotly(modelo, previsao)

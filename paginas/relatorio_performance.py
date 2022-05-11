@@ -5,18 +5,15 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 
 def relatorio_performance():
-
     qs.extend_pandas()
     st.sidebar.write('Código da Ação')
-    ticker = st.sidebar.text_input('Insira o código de acordo com o site Yahoo Finance.'
-                                   , value='SPY'
-                                   )
+    ticker = st.sidebar.text_input('Insira o código de acordo com o site Yahoo Finance.', value='SPY')
     st.sidebar.write('Período da Análise')
     period = st.sidebar.text_input('Escreva: '
                                    '5y, para 5 anos.',
                                    value='10y'
                                    )
-    returns = qs.utils.download_returns(ticker, period=period)
+    returns = qs.utils.download_returns(ticker, period=period, auto_adjust=True)
 #tentativa de plotagem dos gráficos
     #fig, ax = plt.subplots()
     #sns.heatmap(returns.monthly_returns(), linewidths=1.9, center=0, square=True, annot=True,  vmax=.3, cmap='RdYlGn', fmt='.1f')
